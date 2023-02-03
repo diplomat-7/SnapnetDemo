@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '68692709-0fd0-4e41-b5fa-fa5d187d7608'
+  azureSubscription: '9fe0e004-e178-49a5-8277-4f7f8d1aee68'
 
   # Web app name
   webAppName: 'test'
@@ -17,7 +17,7 @@ variables:
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'production'
+  environmentName: 'test'
 
   # Root folder under which your composer.json file is available.
   rootFolder: $(System.DefaultWorkingDirectory)
@@ -26,7 +26,7 @@ stages:
 - stage: Build
   displayName: Build stage
   variables:
-    phpVersion: '8.0'
+    phpVersion: '7.3'
   jobs:
   - job: BuildJob
     pool:
